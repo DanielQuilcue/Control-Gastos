@@ -9,7 +9,6 @@ function ListadoGastos({ gastos }) {
           <Gasto 
             key={gasto.id}
             gasto={gasto}
-
           />
         ))
       }
