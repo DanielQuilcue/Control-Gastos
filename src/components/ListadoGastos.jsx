@@ -1,6 +1,6 @@
 import Gasto from "./Gasto"
-
-function ListadoGastos({ gastos }) {
+// eslint-disable-next-line react/prop-types
+function ListadoGastos({ gastos, setgastoEditar, eliminarGasto }) {
   return (
     <div className="listado-gastos contenedor">
       <h2>{gastos.length ? 'Gastos' : 'No Hay Gastos aún'}</h2>
@@ -9,6 +9,8 @@ function ListadoGastos({ gastos }) {
           <Gasto 
             key={gasto.id}
             gasto={gasto}
+            setgastoEditar={setgastoEditar}
+            eliminarGasto={eliminarGasto}
           />
         ))
       }
